@@ -18,10 +18,33 @@
     </ul>
     <ul>
       <li><a href="#">Home</a></li>
-      <li class="hideOnMobile"><a href="#">Math</a></li>
-      <li class="hideOnMobile"><a href="#">Science</a></li>
-      <li class="hideOnMobile"><a href="#">Art</a></li>
+      <li onclick=showMathTopics() class="hideOnMobile"><a href="#">Math</a></li>
+      <li onclick=showScienceTopics() class="hideOnMobile"><a href="#">Science</a></li>
+      <li onclick=showArtTopics() class="hideOnMobile"><a href="#">Art</a></li>
       <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></li>
+      
+    </ul>
+     <ul class="mathtopics">
+      <li onclick=hideMathTopics()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></a></li>
+      <li><a href="#">Geometry</a></li>
+      <li><a href="#">Algebra</a></li>
+      <li><a href="#">Calculus</a></li>
+      
+    </ul>
+    
+     <ul class="sciencetopics">
+      <li onclick=hideScienceTopics()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></a></li>
+      <li><a href="#">Biology</a></li>
+      <li><a href="#">Chemistry</a></li>
+      <li><a href="#">Physiology</a></li>
+      
+    </ul>
+    
+     <ul class="arttopics">
+      <li onclick=hideArtTopics()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#1f1f1f"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg></a></li>
+      <li><a href="#">History</a></li>
+      <li><a href="#">Drawing</a></li>
+      <li><a href="#">Painting</a></li>
       
     </ul>
   </nav>
@@ -34,8 +57,33 @@
     function hideSidebar(){
       const sidebar = document.querySelector('.sidebar')
       sidebar.style.display = 'none'
-      
     }
+    function showMathTopics(){
+      const mathtopics = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideMathTopics(){
+      const mathtopics = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+    function showScienceTopics(){
+      const sciencetopics = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideScienceTopics(){
+      const sciencetopics = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+    function showArtTopics(){
+      const arttopics = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+    function hideArtTopics(){
+      const arttopics = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+      
+      
   </script>
 </body>
 </html>
